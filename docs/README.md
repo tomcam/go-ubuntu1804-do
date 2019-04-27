@@ -221,7 +221,6 @@ You're informed its working and will start up at boot from now on:
 Firewall is active and enabled on system startup
 ```
 
-
 ### Review UFW's app profiles
 
 * To see what profiles are set up, enter `ufw app list`:
@@ -287,6 +286,68 @@ See "man sudo_root" for detail
 
 * See https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-18-04 for more on this
 * It may do the same as the `sshd_config` editing. Not sure. So try skipping this on next test.
+
+## Install Go
+
+* Return to the new user terminal (or ssh in again). In this example the user's name is tom:
+
+```
+# Not necessary if you're already in the terminal.
+ssh tom@178.99.20.213
+```
+* Go to the home directory:
+
+```
+cd ~
+```
+
+* Visit the Go downloads page at [https://golang.org/dl/](https://golang.org/dl/) and figure out the most recent stable version. Let's say it's 1.12.4, so you'd do this:
+
+```
+curl -O https://dl.google.com/go/go1.12.1.linux-amd64.tar.gz
+```
+
+The progress looks something like this:
+
+```
+ % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100  121M  100  121M    0     0  92.2M      0  0:00:01  0:00:01 --:--:-- 92.2M
+```
+
+* Extract and copy to `/usr/local`:
+
+```
+sudo tar -xvf go1.12.1.linux-amd64.tar.gz -C /usr/local
+```
+
+There's a huge amount of output, greatly truncated here:
+
+```
+go/
+go/AUTHORS
+go/CONTRIBUTING.md
+go/CONTRIBUTORS
+go/LICENSE
+go/PATENTS
+go/README.md
+go/VERSION
+go/api/
+go/api/README
+go/api/except.txt
+go/api/go1.1.txt
+go/api/go1.10.txt
+go/api/go1.11.txt
+go/api/go1.12.txt
+go/api/go1.2.txt
+go/api/go1.3.txt
+...etc
+```
+
+* Enter your password when asked
+
+
+* Based on [How To Install Go and Set Up a Local Programming Environment on Ubuntu 18.04](https://www.digitalocean.com/community/tutorials/how-to-install-go-and-set-up-a-local-programming-environment-on-ubuntu-18-04)
 
 ## Reference
 
