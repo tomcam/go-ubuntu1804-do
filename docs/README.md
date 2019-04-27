@@ -14,9 +14,10 @@ Installing Golang on Ubuntu 18.04.02
 | IP address            |                            |
 
 
-| Header                |                            |
+| Write dow             | Value                      |
 | --------------------- | -------------------------- |
-| Row 1, Column 1       | Row 1, Column 2            |
+| Droplet name       |             |
+| Droplet IP address | |
 
 
 ## Creating the droplet
