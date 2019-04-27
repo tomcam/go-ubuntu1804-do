@@ -5,6 +5,42 @@ Installing Golang on Ubuntu 18.04.02
 # TODO:
 * See if 1GB was enough to compile Go etc.
 * Figure out whether to go through this again w/the default ssh key, since I already had one.
+* Another article I discovered while trying to get neovim to work, which required Python, had me do this:
+
+```
+sudo apt update
+sudo apt -y upgrade
+```
+
+Which then brought up a dialog. I need to understand what I should have done on DigitalOcean.
+I just decided to take the risky "install the package maintainer's version" to see
+what the worst case scenario would be. What's the best practice here?
+
+```
+Package configuration
+
+    ┌─────────────────────────────────┤  ├─────────────────────────────────┐
+    │ A new version of /boot/grub/menu.lst is available, but the version   │ 
+    │ installed currently has been locally modified.                       │ 
+    │                                                                      │ 
+    │ What would you like to do about menu.lst?                            │ 
+    │                                                                      │ 
+    │     install the package maintainer's version                         │ 
+    │     keep the local version currently installed                       │ 
+    │     show the differences between the versions                        │ 
+    │     show a side-by-side difference between the versions              │ 
+    │     show a 3-way difference between available versions               │ 
+    │     do a 3-way merge between available versions (experimental)       │ 
+    │     start a new shell to examine the situation                       │ 
+    │                                                                      │ 
+    │                                                                      │ 
+    │                                <Ok>                                  │ 
+    │                                                                      │ 
+    └──────────────────────────────────────────────────────────────────────┘ 
+```                                                                             
+
+
+
 
 ## Write down
 
@@ -294,6 +330,7 @@ See "man sudo_root" for detail
 
 * See https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-18-04 for more on this
 * It may do the same as the `sshd_config` editing. Not sure. So try skipping this on next test.
+
 
 ## Install Go
 
