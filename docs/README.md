@@ -298,7 +298,6 @@ You'll see something like this:
 ```
 Available applications:
   OpenSSH
-uwf app list
 ```
 
 ### Confirm the firewall's working:
