@@ -5,7 +5,7 @@ Installing Golang on Ubuntu 18.04.02
 # TODO:
 * See if 1GB was enough to compile Go etc.
 * Figure out whether to go through this again w/the default ssh key, since I already had one.
-* Another article I discovered while trying to get neovim to work, which required Python, had me do this:
+* Another article I discovered [How To Install Python 3 and Set Up a Programming Environment on Ubuntu 18.04 [Quickstart]](https://www.digitalocean.com/community/tutorials/how-to-install-python-3-and-set-up-a-programming-environment-on-ubuntu-18-04-quickstart) while trying to get neovim to work, which required Python, had me do this:
 
 ```
 sudo apt update
@@ -39,7 +39,14 @@ Package configuration
     └──────────────────────────────────────────────────────────────────────┘ 
 ```                                                                             
 
+This was followed by:
 
+
+* Install pip:
+
+```
+sudo apt install -y python3-pip
+```
 
 
 ## Write down
