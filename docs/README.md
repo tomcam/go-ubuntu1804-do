@@ -200,6 +200,25 @@ Available applications:
 uwf app list
 ```
 
+### Confirm the firewall's working:
+
+* To see what the firewall is doing, enter `ufw status`:
+
+```
+ufw status
+```
+
+It informs you:
+
+```
+Status: active
+
+To                         Action      From
+--                         ------      ----
+OpenSSH                    ALLOW       Anywhere                  
+OpenSSH (v6)               ALLOW       Anywhere (v6)   
+```
+
 ## Update sshd_config
 
 Edit the file `/etc/ssh/sshd_config` as shown:
