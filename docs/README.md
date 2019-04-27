@@ -146,6 +146,44 @@ usermod -aG sudo tom
 
 ## Configure the UFW, the firewall
 
+### The first rule: ensure you can ssh in
+
+The first thing to do is to ensure you can use ssh to log back in!
+
+```
+ufw allow OpenSSH
+```
+
+It responds with:
+
+```
+Rules updated
+Rules updated (v6)
+```
+
+### Turn on the firewall
+
+* Enter `ufw enable` to activate the firewall:
+
+```
+ufw enable
+```
+
+You're asked:
+
+```
+Command may disrupt existing ssh connections. Proceed with operation (y|n)? 
+```
+
+* Type `y` and press Enter.
+
+You're informed its working and will start up at boot from now on:
+
+```
+Firewall is active and enabled on system startup
+```
+
+
 ### Review UFW's app profiles
 
 * To see what profiles are set up, enter `ufw app list`:
