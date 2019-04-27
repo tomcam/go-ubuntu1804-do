@@ -1,10 +1,28 @@
-# go-ubuntu1804-do
+# Installing Golang on Ubuntu 18.04.02
 
-Installing Golang on Ubuntu 18.04.02
+If you're a Go programmer and beginning/intermediate devops person 
+who wants to get a DigitalOcean server up and running with the
+least possible trouble but still following best practices, this
+article should get you up and running in a few minutes. It shows
+how to create and secure your new user and root user, install Go,
+and set up a firewall. The built-in Go server is fine even for
+most production purposes, so there are instructions on
+installing a web server aren't necessary.
+
+## What this article shows you how to do
+
+This shows every step in one place to:
+
+* Get a new Droplet on DigitalOcean
+* Create root user credentials
+* Create a new user with sudo privileges
+* Install Go
+* Configure the built-in firewall named UFW to serve web pages and accept ssh connections
+
 
 # TODO:
 * See if 1GB was enough to compile Go etc.
-* Figure out whether to go through this again w/the default ssh key, since I already had one.
+* Missing full ssh instructions. Figure out whether to go through this again w/the default ssh key, since I already had one.
 * Another article I discovered [How To Install Python 3 and Set Up a Programming Environment on Ubuntu 18.04 [Quickstart]](https://www.digitalocean.com/community/tutorials/how-to-install-python-3-and-set-up-a-programming-environment-on-ubuntu-18-04-quickstart) while trying to get neovim to work, which required Python, had me do this:
 
 ```
