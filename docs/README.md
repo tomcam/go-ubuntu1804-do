@@ -10,7 +10,7 @@ Installing Golang on Ubuntu 18.04.02
 
 
 
-| Write dow                | Value                      |
+| Note this                |                            |
 | ------------------------ | -------------------------- |
 | Droplet name             |                            |
 | Droplet IP address       |                            |
