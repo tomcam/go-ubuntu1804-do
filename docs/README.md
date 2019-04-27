@@ -10,7 +10,7 @@ Installing Golang on Ubuntu 18.04.02
 
 
 
-| Note this                |                            |
+| Note this                |  Write the value here      |
 | ------------------------ | -------------------------- |
 | Droplet name             |                            |
 | Droplet IP address       |                            |
@@ -31,6 +31,29 @@ Installing Golang on Ubuntu 18.04.02
 * Choose Create.
 * The Resources page displays 
 
+## Setting up the root and second user
+*  Drop into the terminal on your local machine
+* Enter the following, replace the numbers with your own IP address.
+
+```bash
+ssh root@178.99.20.213
+```
+A message something like this appears:
+
+```bash
+The authenticity of host '178.99.20.213 (178.99.20.213)' can't be established.
+ECDSA key fingerprint is SHA256:v5wGzOxtO/nI9rsXAfdkadfjtqntkQBTbrY9mjHQ.
+Are you sure you want to continue connecting (yes/no)?
+```
+
+* Type `yes` and press Enter.
+
+This happens:
+
+```
+Warning: Permanently added '178.99.20.213' (ECDSA) to the list of known hosts.
+Connection closed by 178.99.20.213 port 22
+```
 
 ## Reference
 
