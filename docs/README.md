@@ -94,6 +94,26 @@ root@dev:~#
 
 ```
 
+## Create a password for root
+
+Write down a password for root in the chart above and copy it to the system clipboard.
+
+* Enter `passwd root` at the prompt:
+
+```
+passwd root
+```
+
+You're asked for the new password. 
+
+* Paste it in twice:
+
+```
+Enter new UNIX password: 
+Retype new UNIX password: 
+passwd: password updated successfully
+```
+
 ## Update sshd_config
 
 Edit the file `/etc/ssh/sshd_config` as shown:
