@@ -199,6 +199,14 @@ Rules updated
 Rules updated (v6)
 ```
 
+## Allow web servers 
+
+```
+sudo ufw allow proto tcp from any to any port 80,443
+````
+
+Learn more about UFW at [UFW Essentials: Common Firewall Rules and Commands](https://www.digitalocean.com/community/tutorials/ufw-essentials-common-firewall-rules-and-commands)
+
 ### Turn on the firewall
 
 * Enter `ufw enable` to activate the firewall:
