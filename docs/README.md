@@ -10,14 +10,14 @@ Installing Golang on Ubuntu 18.04.02
 
 
 
-| Note this                |  Write the value here      |
-| ------------------------ | -------------------------- |
-| Droplet name             |                            |
-| Droplet IP address       |                            |
-| root username            |                            |
-| root password            |                            |
-| second username password |                            |
-| second username password |                            |
+| Note this             |  Write the value here      |
+| --------------------- | -------------------------- |
+| Droplet name          |                            |
+| Droplet IP address    |                            |
+| root username         |                            |
+| root password         |                            |
+| new username password |                            |
+| new username password |                            |
 
 ## Creating the droplet
 
@@ -31,7 +31,7 @@ Installing Golang on Ubuntu 18.04.02
 * Choose Create.
 * The Resources page displays 
 
-## Setting up the root and second user
+## Setting up the root and new user
 *  Drop into the terminal on your local machine
 * Enter the following, replace the numbers with your own IP address.
 
@@ -54,6 +54,72 @@ This happens:
 Warning: Permanently added '178.99.20.213' (ECDSA) to the list of known hosts.
 Connection closed by 178.99.20.213 port 22
 ```
+
+* Run ssh again:
+
+```bash
+ssh root@178.99.20.213
+```
+
+This time you get in:
+
+```bash
+Welcome to Ubuntu 18.04.2 LTS (GNU/Linux 4.15.0-47-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Sat Apr 27 08:58:53 UTC 2019
+
+  System load:  0.0                Processes:           109
+  Usage of /:   0.6% of 154.90GB   Users logged in:     0
+  Memory usage: 1%                 IP address for eth0: 138.68.20.213
+  Swap usage:   0%
+
+  Get cloud support with Ubuntu Advantage Cloud Guest:
+    http://www.ubuntu.com/business/services/cloud
+
+0 packages can be updated.
+0 updates are security updates.
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+root@dev:~#
+
+```
+
+## Create the new user
+
+Let's call the new user `tom`. Write down the username and password in the chart above.
+
+
+* Enter the following. Replace `tom` with whatever username you want to create.
+
+```bash
+adduser tom
+```
+
+* Copy the password you created to the system clipboard so you don't screw up entering it twice as you're about to do.
+
+* Enter the password
+
+## Update sshd_config
+
+
+
+sudo nano /etc/ssh/sshd_config
+PermitRootLogin prohibit-password to PermitRootLogin yes 
+PasswordAuthentication no to PasswordAuthentication yes
+then, restart ssh service:
+
+sudo service ssh restart
+For more information, see [Error Permission denied (publickey) when I try to ssh](https://www.digitalocean.com/community/questions/error-permission-denied-publickey-when-i-try-to-ssh)
 
 ## Reference
 
