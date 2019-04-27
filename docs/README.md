@@ -133,6 +133,35 @@ Enter the new value, or press ENTER for the default
 Is the information correct? [Y/n] y
 ```
 
+## Set privileges for the new user
+
+The new user needs to perform some adminstrative privileges. They're temporarily acquired through the
+`sudo` command, but the user doesn't have the ability to use `sudo`.
+
+* Add the user to the sudo group:
+
+```
+usermod -aG sudo tom
+```
+
+## Configure the UFW, the firewall
+
+### Review UFW's app profiles
+
+* To see what profiles are set up, enter `ufw app list`:
+
+```
+ufw app list
+```
+
+You'll see something like this:
+
+```
+Available applications:
+  OpenSSH
+uwf app list
+```
+
 ## Update sshd_config
 
 Edit the file `/etc/ssh/sshd_config` as shown:
