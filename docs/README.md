@@ -39,18 +39,13 @@ Package configuration
     └──────────────────────────────────────────────────────────────────────┘ 
 ```                                                                             
 
-This was followed by:
 
+## Save the following information
 
-* Install pip:
-
-```
-sudo apt install -y python3-pip
-```
-
-
-## Write down
-
+As soon as you need the following information, write it down. **In the case of passwords, 
+type them before actually entering them, then copy to the system clipboard** and paste them in when asked for
+a password. That way you don't type in the wrong thing, because password fields hide
+what you type. Plus you have to do it twice.
 
 
 | Note this             |  Write the value here      |
@@ -429,8 +424,11 @@ export PATH=$PATH:$GOPATH/bin:/usr/local/go/bin
 . ~/.profile
 ```
 
-
 Based on [How To Install Go and Set Up a Local Programming Environment on Ubuntu 18.04](https://www.digitalocean.com/community/tutorials/how-to-install-go-and-set-up-a-local-programming-environment-on-ubuntu-18-04)
+
+## Optional
+
+* I [installed Neovim](https://github.com/tomcam/neovim)
 
 ## Reference
 
