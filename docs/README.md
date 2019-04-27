@@ -7,7 +7,7 @@ Installing Golang on Ubuntu 18.04.02
 * Figure out whether to go through this again w/the default ssh key, since I already had one.
 
 ## Write down
-* Droplet name _************_
+* Droplet name ______________
 
 ## Creating the droplet
 
