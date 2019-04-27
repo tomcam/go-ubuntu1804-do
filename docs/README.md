@@ -311,12 +311,12 @@ ufw status
 It informs you:
 
 ```
-Status: active
-
 To                         Action      From
 --                         ------      ----
 OpenSSH                    ALLOW       Anywhere                  
-OpenSSH (v6)               ALLOW       Anywhere (v6)   
+80,443/tcp                 ALLOW       Anywhere                  
+OpenSSH (v6)               ALLOW       Anywhere (v6)             
+80,443/tcp (v6)            ALLOW       Anywhere (v6)     
 ```
 
 ### Copy authorized keys to the new user account.
