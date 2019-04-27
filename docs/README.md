@@ -107,7 +107,31 @@ adduser tom
 
 * Copy the password you created to the system clipboard so you don't screw up entering it twice as you're about to do.
 
-* Enter the password
+* Enter the password twice (just paste in) as requested.
+
+```
+Adding user `tom' ...
+Adding new group `tom' (1000) ...
+Adding new user `tom' (1000) with group `tom' ...
+Creating home directory `/home/tom' ...
+Copying files from `/etc/skel' ...
+Enter new UNIX password: 
+Retype new UNIX password: 
+passwd: password updated successfully
+Changing the user information for tom
+```
+
+* Then just press Enter for everything else if you want:
+
+```bash
+Enter the new value, or press ENTER for the default
+	Full Name []: 
+	Room Number []: 
+	Work Phone []: 
+	Home Phone []: 
+	Other []: 
+Is the information correct? [Y/n] y
+```
 
 ## Update sshd_config
 
