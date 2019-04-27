@@ -205,7 +205,7 @@ Rules updated (v6)
 sudo ufw allow proto tcp from any to any port 80,443
 ````
 
-Learn more about UFW at [UFW Essentials: Common Firewall Rules and Commands](https://www.digitalocean.com/community/tutorials/ufw-essentials-common-firewall-rules-and-commands)
+Learn more about UFW at [UFW Essentials: Common Firewall Rules and Commands](https://www.digitalocean.com/community/tutorials/ufw-essentials-common-firewall-rules-and-commands) and [How To Set Up a Firewall with UFW on Ubuntu 14.04](https://www.digitalocean.com/community/tutorials/how-to-set-up-a-firewall-with-ufw-on-ubuntu-14-04)
 
 ### Turn on the firewall
 
