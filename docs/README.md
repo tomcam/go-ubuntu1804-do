@@ -352,7 +352,7 @@ sudo chown -R root:root /usr/local/go
 
 Enter your password if asked.
 
-* Create the recommended Go workspace (this may have been done)
+* Create the recommended Go workspace:
 
 ```
 mkdir -p $HOME/go/{bin,src}
