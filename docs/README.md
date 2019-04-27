@@ -94,6 +94,24 @@ root@dev:~#
 
 ```
 
+## Update sshd_config
+
+Edit the file `/etc/ssh/sshd_config` as shown:
+
+```bash
+sudo nano /etc/ssh/sshd_config
+```
+
+* Add or change `PermitRootLogin prohibit-password` to `PermitRootLogin yes` 
+* Add or change `PasswordAuthentication no` to `PasswordAuthentication yes`
+
+* Restart the ssh service:
+
+```bash
+sudo service ssh restart
+```
+For more information, see [Error Permission denied (publickey) when I try to ssh](https://www.digitalocean.com/community/questions/error-permission-denied-publickey-when-i-try-to-ssh)
+
 ## Create the new user
 
 Let's call the new user `tom`. Write down the username and password in the chart above.
@@ -219,23 +237,36 @@ OpenSSH                    ALLOW       Anywhere
 OpenSSH (v6)               ALLOW       Anywhere (v6)   
 ```
 
-## Update sshd_config
+### Copy authorized keys to the new user account.
 
-Edit the file `/etc/ssh/sshd_config` as shown:
+* Run `rsync` as follows, **remembering to replace tom with the new user name*:
 
-```bash
-sudo nano /etc/ssh/sshd_config
+```
+rsync --archive --chown=tom:tom ~/.ssh /home/tom
 ```
 
-* Change  `PermitRootLogin prohibit-password` to `PermitRootLogin yes`
-* Change `PasswordAuthentication no` to `PasswordAuthentication yes`
+* Test it. Open a new terminal and try to ssh in to the new user account, remembering to replace `tom` with the new user name:
 
-* Restart the ssh service:
-
-```bash
-sudo service ssh restart
 ```
-For more information, see [Error Permission denied (publickey) when I try to ssh](https://www.digitalocean.com/community/questions/error-permission-denied-publickey-when-i-try-to-ssh)
+# Replace tom with the new username you created.
+ssh tom@178.99.20.213
+```
+
+You get an introductory screen, similar to the one you got as root. Here it is, truncated:
+
+```
+Welcome to Ubuntu 18.04.2 LTS (GNU/Linux 4.15.0-47-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+...
+To run a command as administrator (user "root"), use "sudo <command>".
+See "man sudo_root" for detail
+```
+
+#### Notes
+
+* See https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-18-04 for more on this
+* It may do the same as the `sshd_config` editing. Not sure. So try skipping this on next test.
 
 ## Reference
 
