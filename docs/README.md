@@ -135,14 +135,20 @@ Is the information correct? [Y/n] y
 
 ## Update sshd_config
 
+Edit the file `/etc/ssh/sshd_config` as shown:
 
-
+```bash
 sudo nano /etc/ssh/sshd_config
-PermitRootLogin prohibit-password to PermitRootLogin yes 
-PasswordAuthentication no to PasswordAuthentication yes
-then, restart ssh service:
+```
 
+* Change  `PermitRootLogin prohibit-password` to `PermitRootLogin yes`
+* Change `PasswordAuthentication no` to `PasswordAuthentication yes`
+
+* Restart the ssh service:
+
+```bash
 sudo service ssh restart
+```
 For more information, see [Error Permission denied (publickey) when I try to ssh](https://www.digitalocean.com/community/questions/error-permission-denied-publickey-when-i-try-to-ssh)
 
 ## Reference
