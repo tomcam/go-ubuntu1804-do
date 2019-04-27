@@ -344,10 +344,41 @@ go/api/go1.3.txt
 ...etc
 ```
 
-* Enter your password when asked
+* Change permissions of the directory's owner and group to root:
+
+```
+sudo chown -R root:root /usr/local/go
+```
+
+Enter your password if asked.
+
+* Create the recommended Go workspace (this may have been done)
+
+```
+mkdir -p $HOME/go/{bin,src}
+```
+
+* Open `~/.profile` for editing:
+
+```
+nano ~/.profile
+```
+
+* Add the following lines to `~/.profile` and save it:
+
+```
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin:/usr/local/go/bin
+```
+
+* Quit the editor, then enter `. ~/.profile` at the command line to reload the environment:
+
+```
+. ~/.profile
+```
 
 
-* Based on [How To Install Go and Set Up a Local Programming Environment on Ubuntu 18.04](https://www.digitalocean.com/community/tutorials/how-to-install-go-and-set-up-a-local-programming-environment-on-ubuntu-18-04)
+Based on [How To Install Go and Set Up a Local Programming Environment on Ubuntu 18.04](https://www.digitalocean.com/community/tutorials/how-to-install-go-and-set-up-a-local-programming-environment-on-ubuntu-18-04)
 
 ## Reference
 
