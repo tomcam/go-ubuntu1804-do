@@ -238,6 +238,12 @@ The new user needs to perform some adminstrative privileges. They're temporarily
 usermod -aG sudo tom
 ```
 
+* Make sure your user owns the $HOME directory and all its subdirectories:
+
+```
+sudo chown -R tom:tom $HOME
+```
+
 ## Configure the UFW, the firewall
 
 ### The first rule: ensure you can ssh in
@@ -415,6 +421,7 @@ sudo chown -R root:root /usr/local/go
 ```
 
 Enter your password if asked.
+
 
 * Create the recommended Go workspace:
 
