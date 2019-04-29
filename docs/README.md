@@ -72,7 +72,7 @@ what you type. Plus you have to do it twice.
 | Droplet IP address    |                            |
 | root username         |                            |
 | root password         |                            |
-| new username password |                            |
+| new username          |                            |
 | new username password |                            |
 
 ## Creating the droplet
